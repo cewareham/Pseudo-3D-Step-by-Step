@@ -4,6 +4,7 @@
 class Game {
   constructor(canvas) {
     this.canvas = canvas;
+    this.road = new Road(canvas, ss.draw_distance);
   }
 
   update = () => {
@@ -11,6 +12,7 @@ class Game {
   }
 
   render = () => {
-    background(ss.colors.light_grey);
+    background(ss.colors.white);
+    this.road.render();
   }
 }
